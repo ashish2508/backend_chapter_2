@@ -20,11 +20,10 @@ Content-Type: application/json
 
 ###Fetch all todos GET/Todos (protected)
 GET http://localhost:3000/todos
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM1MzUxNDY4LCJleHAiOjE3MzU0Mzc4Njh9.45EenzscU6lIpQSu_t1zvProeNqAi4Fuf6xYtEbFon8
-
+Authorization:
 ### Create a new todo POST /TODOS
 POST http://localhost:3000/todos
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM1MzUxNDY4LCJleHAiOjE3MzU0Mzc4Njh9.45EenzscU6lIpQSu_t1zvProeNqAi4Fuf6xYtEbFon8
+Authorization:
 Content-Type: application/json
 
 {
