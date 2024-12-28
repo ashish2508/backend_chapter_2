@@ -7,7 +7,7 @@ import todoRoutes from "./routes/todoRoutes.js";
 
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5003;
 
 //Get the file path from url of the current module
 const __filename=fileURLToPath(import.meta.url)
