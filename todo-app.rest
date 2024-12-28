@@ -17,4 +17,16 @@ Content-Type: application/json
   "username":"ash@gmail.com",
   "password":"12123"
 }
-###
+
+###Fetch all todos GET/Todos (protected)
+GET http://localhost:3000/todos
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM1MzUxNDY4LCJleHAiOjE3MzU0Mzc4Njh9.45EenzscU6lIpQSu_t1zvProeNqAi4Fuf6xYtEbFon8
+
+### Create a new todo POST /TODOS
+POST http://localhost:3000/todos
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM1MzUxNDY4LCJleHAiOjE3MzU0Mzc4Njh9.45EenzscU6lIpQSu_t1zvProeNqAi4Fuf6xYtEbFon8
+Content-Type: application/json
+
+{
+  "task": "Finished the P"
+}
