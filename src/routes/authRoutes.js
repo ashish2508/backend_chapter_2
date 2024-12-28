@@ -52,7 +52,6 @@ SELECT * FROM users WHERE username = ?
 		if (!passwordIsValid) {
 			return res.status(401).send({ message: "Invalid Password" });
 		}
-    console.log(user)
     const token=jwt.sign({id: user.id},process.env.JWT_SECRET,{expiresIn:'24h'})
     res.json({token})
 	} catch (err) {
