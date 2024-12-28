@@ -11,12 +11,26 @@ router.get("/", (req, res) => {
 });
 
 //Create a new todo
-router.post("/", (req, res) => {});
+router.post("/", (req, res) => {
+	const { task } = req.body;
+	const insertTodo = db.prepare(
+		`INSERT INTO todos (user_id, task) VALUES (?, ?)`
+	);
+	const result = insertTodo.run(req.userId, task);
+
+	res.json({ id: result.lastInsertRowid, task, completed: 0 });
+});
 
 //update a todo
-router.post("/:id", (req, res) => {});
+router.put("/:id", (req, res) => {
+	const updatedTodo = db.prepare("UPDATE todos SET completed = ? WHERE id = ?");
+});
 
 //delete a todo
-router.delete("/:id", (req, res) => {});
+router.delete("/:id", (req, res) => {
+	const deleteTodo = db.prepare(
+		`DELETE FROM todos WHERE id = ? AND user_id = ?`
+	);
+});
 
 export default router;

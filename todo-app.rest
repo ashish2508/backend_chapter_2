@@ -17,4 +17,15 @@ Content-Type: application/json
   "username":"ash@gmail.com",
   "password":"12123"
 }
-###
+
+###Fetch all todos GET/Todos (protected)
+GET http://localhost:3000/todos
+Authorization:
+### Create a new todo POST /TODOS
+POST http://localhost:3000/todos
+Authorization:
+Content-Type: application/json
+
+{
+  "task": "Finished the P"
+}
