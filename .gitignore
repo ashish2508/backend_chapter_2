@@ -8,6 +8,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+todo-app.rest
 node_modules
 dist-ssr
 *.local
